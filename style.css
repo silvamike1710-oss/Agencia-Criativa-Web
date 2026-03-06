@@ -37,12 +37,14 @@ header {
     padding-bottom: 3rem;
     position: relative;
 }
-.people {
+.header__img {
     width: 100%;
     display: block;
     height: auto;
+    border-bottom: 5px solid rgb(106, 70, 15);
+    border-top: 5px solid rgb(106, 70, 15);
 }
-.first {
+.header__title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,7 +61,7 @@ header {
 }
 
 
-.contactus{
+.header__button{
     margin-top: -10%;
     position: absolute;
     top: 90%;
@@ -74,17 +76,19 @@ header {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.kid {
+.section__img {
     width: 100%;
     display: block;
     height: auto;
+    border-bottom: 5px solid rgb(106, 70, 15);
+    border-top: 5px solid rgb(106, 70, 15);
 }
 section {
     position:relative;
     padding-bottom: 3rem;
     
 }
-.second {
+.section__title {
     
     position: absolute;
     top: 50%;
@@ -100,7 +104,7 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-.learnmore {
+.section__button {
     
     position: absolute;
     top: 80%;
@@ -127,7 +131,7 @@ container {
     padding-bottom: 3rem;
 }
 
-.somedude {
+.aside__img {
     background: rgba(211, 211, 211, 0.75);
     padding: 4rem;
     width: 30vw;
@@ -135,7 +139,7 @@ container {
     
 }
 
-aside {
+.aside__text {
     font-size: clamp(1rem, 2vw, 4rem);
     background-color: rgba(211, 211, 211, 0.75);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -154,27 +158,27 @@ container {
     grid-template-columns: 1fr;
 }
 
-.somedude,
-aside {
+.aside__img,
+.aside__text {
     width: 100%;
     margin-bottom: 2rem;
 }
 
-.first{
+.header__title{
     margin-top: -13%;
     font-size: 2rem;
 }
-.second {
+.section__title {
     margin-top: -13%;
     font-size: 2rem;
     
 }
 
-.contactus{
+.header__button{
     font-size: 1.2rem;
     margin-top: -10%;
 }
-.learnmore {
+.section__button {
     font-size: 1.2rem;
     margin-top: -7%;
 }
