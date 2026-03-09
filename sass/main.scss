@@ -1,0 +1,172 @@
+
+
+@use "variables";
+@use "mixins";
+
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(189, 135, 94);
+}
+
+a {
+    text-decoration: none;
+    color: variables.$font-color;
+
+    &:hover,
+    &:visited {
+        color: variables.$font-color;
+    };
+}
+.topnav{
+    width: 100%;
+    background-color: variables.$primary-color;
+    justify-content: center;
+    color: variables.$font-color;
+    display: flex;
+    gap: 2rem;
+    font-size: clamp(1rem, 2vw, 4rem);
+    
+}
+
+header {
+    padding-bottom: 3rem;
+    position: relative;
+}
+.header__img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-bottom: 5px solid rgb(106, 70, 15);
+    border-top: 5px solid rgb(106, 70, 15);
+}
+.header__title {
+    @include mixins.center-absolute;
+    @include mixins.glass;
+    font-size: clamp(2rem, 3vw, 7rem);
+    padding: 1rem;
+    margin-top: -7%;
+    
+}
+
+
+.header__button{
+    @include mixins.center-absolute;
+    @include mixins.glass;
+    margin-top: -10%;
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+.section__img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-bottom: 5px solid rgb(106, 70, 15);
+    border-top: 5px solid rgb(106, 70, 15);
+}
+section {
+    position:relative;
+    padding-bottom: 3rem;
+    
+}
+.section__title {
+    
+    @include mixins.center-absolute;
+    @include mixins.glass;
+    font-size: clamp(2rem, 4vw, 7rem);
+    padding: 0.5rem;
+}
+
+.section__button {
+    
+    @include mixins.center-absolute;
+    @include mixins.glass;
+    font-size: 3rem;
+    z-index: 2;
+    padding: 0.5rem;
+    
+}
+
+container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+.aside__img {
+    background: variables.$primary-color;
+    padding: 4rem;
+    width: 30vw;
+    border-radius:  variables.$border-radius;
+    
+}
+
+.aside__text {
+    font-size: clamp(1rem, 2vw, 4rem);
+    background-color:  variables.$primary-color;
+    -webkit-backdrop-filter:  variables.$backdrop-filter;
+    border-radius:  variables.$border-radius;
+    border:  variables.$border;
+    padding: 3rem;
+    color: variables.$font-color;
+    width: 65vw;
+    max-width: 1800px;
+}
+
+
+@media (max-width: 768px) {
+
+container {
+    grid-template-columns: 1fr;
+}
+
+.aside__img,
+.aside__text {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.header__title{
+    margin-top: -13%;
+    font-size: 2rem;
+}
+.section__title {
+    margin-top: -13%;
+    font-size: 2rem;
+    
+}
+
+.header__button{
+    font-size: 1.2rem;
+    margin-top: -10%;
+}
+.section__button {
+    font-size: 1.2rem;
+    margin-top: -7%;
+}
+
+.topnav {
+    gap: 1rem;
+}
+
+}
+footer{
+    width: 100%;
+    background-color: variables.$primary-color;
+    -webkit-backdrop-filter: variables.$backdrop-filter;
+    font-size: 2rem;
+    justify-content: center;
+    color: variables.$font-color;
+    gap: 10rem;
+    display: flex;
+    
+}
